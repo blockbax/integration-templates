@@ -29,13 +29,21 @@ groups/
 Inside this repository groups can configure their inbound connector templates inside the `groups` directory. Groups are added by including a `groups/<group-id>/index.yml` file. This is an example `index.yml`:
 
 ```yml
-name: Blockbax
-description: Example templates provided by Blockbax
+# group display name
+# Maximum of 50 characters.
+name: Your company
+# group desciption
+# Maximum of 150 characters.
+description: Example for your company or group
+# group contact information and socials (optional)
 contact:
-    website: https://blockbax.com/contact/
-    email: development@blockbax.com
-    linkedin: https://www.linkedin.com/company/blockbax/
-    github: https://github.com/blockbax
+    email: your@company.com
+    website: https://www.your-company.com
+    linkedin: https://www.linkedin.com/company/company-x/
+    facebook: https://www.facebook.com/company-x
+    twitter: company-x
+    instagram: company-x
+    github: company-x
 ```
 
 The `contact` field is optional. 
@@ -49,11 +57,21 @@ Each group defines their templates inside their group directory. These templates
 The template can be configured by creating a `config.yml` file inside the template directory. This is an example `config.yml`:
 
 ```yaml
+# Version used to track changes
 version: 1
-name: JSON example
-description: JSON example provided by Blockbax
+# Template display name.
+# Maximum of 50 characters.
+name: Your template
+# Template description to provide additional information.
+# Maximum of 150 characters.
+description: Your template description
+# Template protocol
+# Choose from HTTP, MQTT or CoAP.
 protocol: HTTP
+# Template protoco format.
+# Choose from STRING, BYTES, JSON, CBOR.
 payloadFormat: JSON
+# A list of unique versions that are deprecated.
 deprecatedVersions: []
 ```
 
