@@ -101,6 +101,8 @@ The `level` can be choosen from the following options:
 
 Inside the `payloads/` directory you can add example payloads that you can use inside your tests file to automatically test your templates conversion script.  The payload file is read in as a `utf-8` string and depending on the configured `payloadFormat` of the template it is parsed/decoded to the expected payload format. `CBOR` & `JSON` are parsed to javascript objects using their respective parsers.  For the `STRINIG` type the raw string contents are used and for the `BYTES` type the contents of the payload are expected to be in hexadecimal characters.
 
+Example payloads for each payload format can be found in the `examples/` directory.
+
 #### Assets
 
 Inside the `assets/` directory a `README.md` file can be added to provide documentation for your integration. This is optional and is not used for anything.
