@@ -4,7 +4,7 @@
     "scripts": {
         "add": "node ./resources/cli/add.js",
         "test": "jest",
-        "alt-test": "jest resources/src/tests/exampleScripts.test.js resources/src/tests/timezone.test.js",
+        "pre-check": "jest resources/src/tests/exampleScripts.test.js resources/src/tests/timezone.test.js",
         "lint": "prettier --write ."
     },
     "devDependencies": {
