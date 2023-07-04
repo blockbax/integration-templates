@@ -53,7 +53,7 @@ jobs:
             - run: validate
 
     test-user-scripts:
-        needs: changes
+        needs: [changes, pre-check]
         if: ${{ needs.changes.outputs.groups == 'true' }}
         runs-on: ubuntu-latest
         steps:
