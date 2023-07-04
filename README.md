@@ -38,6 +38,8 @@ contact:
     github: https://github.com/blockbax
 ```
 
+The `contact` field is optional. 
+
 ### Template
 
 Each group defines their templates inside their group directory. These templates are configured inside the `groups/<group-id>/<template-id>/` directory.
@@ -62,16 +64,18 @@ The `protocol` and `payloadFormat` can be choosen from the following options:
 | `protocol`      | `HTTP`, `MQTT` or `CoAP`            |
 | `payloadFormat` | `JSON`, `CBOR`, `String` or `BYTES` |
 
+The `description` field is optional and the `version` field needs to be greater than `1`.
+
 #### Testing
 
-To test your template you can define tests inside the `tests.yml` file. Tests are automatically run inside our CI pipelines and use the `userScript` from the `config.yml` file. You can also [run the tests locally](#configure-the-test-suite).
+To test your template you can define tests inside the `tests.yml` file. Tests are automatically run inside our CI pipelines and use the `userScript` from the `config.yml` file. You can also run the tests locally by running `npm test`.
 
-This is an example `tests.yml`, note that there should always be one default test:
+This is an example `tests.yml`, note that there should always be one `default` test:
 
 ```yaml
 default:
     # at least one 'default' test
-    description: Should log the integers from the hex file
+    description: Should ingest a number from the json file, log a test message and log a test error
     payload: ./payloads/jsonPayloadExample.json
     expectedMeasurements:
         - ingestionId: test-subject-id$test-ingestion-id
@@ -86,6 +90,12 @@ default:
 test-measurements-from-json-payload:
     # Define more tests
 ```
+
+The `level` can be choosen from the following options:
+
+| Field        | Options                   |
+| ------------ | ------------------------- |
+| `level`      | `INFO`, `WARN` or `ERROR` |
 
 ##### Payloads
 
