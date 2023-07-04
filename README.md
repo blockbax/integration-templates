@@ -62,7 +62,7 @@ The `protocol` and `payloadFormat` can be choosen from the following options:
 | Field           | Options                             |
 | --------------- | ----------------------------------- |
 | `protocol`      | `HTTP`, `MQTT` or `CoAP`            |
-| `payloadFormat` | `JSON`, `CBOR`, `String` or `BYTES` |
+| `payloadFormat` | `JSON`, `CBOR`, `STRING` or `BYTES` |
 
 The `description` field is optional and the `version` field needs to be greater than `1`.
 
