@@ -16,7 +16,7 @@ groups/
 │    ├── index.yml
 │    ├── <template-id>
 │    │    ├── config.yml
-│    │    ├── <script-name>.js
+│    │    ├── script.js
 │    │    ├── tests.yml
 │    │    ├── payloads/
 │    │    │    └── <payload-example>
