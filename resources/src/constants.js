@@ -4,7 +4,12 @@ const path = require("path");
 const groupDirectoryName = "groups/";
 const examplesDirectoryName = "examples/";
 const groupsRootPath = path.join(__dirname, "..", "..", groupDirectoryName);
-const examplesRootPath = path.join(__dirname, "..", "..", examplesDirectoryName);
+const examplesRootPath = path.join(
+    __dirname,
+    "..",
+    "..",
+    examplesDirectoryName
+);
 const groupIndexFileName = "index.yml";
 const templateConfigFileName = "config.yml";
 const templateTestsSuiteFileName = "tests.yml";

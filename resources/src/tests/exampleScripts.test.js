@@ -25,19 +25,23 @@ if (templateIds.length === 0) {
     });
 }
 
-const pathOptions = {root: ""}
+const pathOptions = { root: "" };
 describe("examples", () => {
     for (const templateId of templateIds) {
-        const templateConfig = getTemplateConfig("examples", templateId, pathOptions);
+        const templateConfig = getTemplateConfig(
+            "examples",
+            templateId,
+            pathOptions
+        );
         const { name: templateName, userScript } = templateConfig;
-        
+
         const userScriptPath = newTemplateUserScriptPath(
             "examples",
             templateId,
             userScript,
             pathOptions
         );
-        
+
         let convertPayload;
         beforeAll(async () => {
             // load the user defined script once
@@ -56,8 +60,10 @@ describe("examples", () => {
 
         describe(templateName, () => {
             const tests = getTests("examples", templateId, pathOptions);
-            if (tests === undefined){
-                throw Error(`example with template '${templateId}' does not contain any tests!`)
+            if (tests === undefined) {
+                throw Error(
+                    `example with template '${templateId}' does not contain any tests!`
+                );
             }
             for (const [testName, test] of Object.entries(tests)) {
                 it(test.description || testName, async () => {
@@ -74,7 +80,7 @@ describe("examples", () => {
                     );
                     const payloadPath = path.join(
                         templatePath,
-                        relativePayloadPath,
+                        relativePayloadPath
                     );
 
                     const expected =
@@ -105,8 +111,7 @@ describe("examples", () => {
                         convertPayload(payload, context);
                     } catch (error) {
                         expect([error.message]).toEqual(
-                            expectedErrors?.map((error) => error.message) ??
-                                []
+                            expectedErrors?.map((error) => error.message) ?? []
                         );
                     }
 
@@ -134,9 +139,7 @@ describe("examples", () => {
                     expect(
                         context.addMeasurement.mock.calls.length
                     ).toBeValidnumberOfMeasurements();
-                    expect(context.addMeasurement.mock.calls).toEqual(
-                        expected
-                    );
+                    expect(context.addMeasurement.mock.calls).toEqual(expected);
                     context.addMeasurement.mock.calls.forEach((call) => {
                         expect(call[1]).toBeValidValue();
                     });

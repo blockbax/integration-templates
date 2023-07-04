@@ -7,7 +7,7 @@ function newGroup(groupID, groupIndex, templates = []) {
     return {
         groupID,
         groupIndex,
-        templates
+        templates,
     };
 }
 

@@ -46,7 +46,7 @@ contact:
     github: company-x
 ```
 
-The `contact` field is optional. 
+The `contact` field is optional.
 
 ### Template
 
@@ -111,13 +111,13 @@ test-measurements-from-json-payload:
 
 The `level` can be choosen from the following options:
 
-| Field        | Options                   |
-| ------------ | ------------------------- |
-| `level`      | `INFO`, `WARN` or `ERROR` |
+| Field   | Options                   |
+| ------- | ------------------------- |
+| `level` | `INFO`, `WARN` or `ERROR` |
 
 ##### Payloads
 
-Inside the `payloads/` directory you can add example payloads that you can use inside your tests file to automatically test your templates conversion script.  The payload file is read in as a `utf-8` string and depending on the configured `payloadFormat` of the template it is parsed/decoded to the expected payload format. `CBOR` & `JSON` are parsed to javascript objects using their respective parsers.  For the `STRINIG` type the raw string contents are used and for the `BYTES` type the contents of the payload are expected to be in hexadecimal characters.
+Inside the `payloads/` directory you can add example payloads that you can use inside your tests file to automatically test your templates conversion script. The payload file is read in as a `utf-8` string and depending on the configured `payloadFormat` of the template it is parsed/decoded to the expected payload format. `CBOR` & `JSON` are parsed to javascript objects using their respective parsers. For the `STRINIG` type the raw string contents are used and for the `BYTES` type the contents of the payload are expected to be in hexadecimal characters.
 
 Example payloads for each payload format can be found in the `examples/` directory.
 

@@ -1,3 +1,3 @@
 module.exports = () => {
-  process.env.TZ = "UTC";
+    process.env.TZ = "UTC";
 };

@@ -3,7 +3,7 @@ function convertPayload(payload, context) {
         context.logError("Expected 'data' in payload to be an array");
         return;
     }
-    
+
     for (const data of payload.data) {
         if (data.recorded == null) {
             context.logError("Missing value for 'recorded'");

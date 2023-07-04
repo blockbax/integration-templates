@@ -62,8 +62,10 @@ for (const groupId of groupIds) {
 
             describe(templateName, () => {
                 const tests = getTests(groupId, templateId);
-                if (tests === undefined){
-                    throw Error(`group '${groupId}' with template '${templateId}' does not contain any tests!`)
+                if (tests === undefined) {
+                    throw Error(
+                        `group '${groupId}' with template '${templateId}' does not contain any tests!`
+                    );
                 }
                 for (const [testName, test] of Object.entries(tests)) {
                     it(test.description || testName, async () => {

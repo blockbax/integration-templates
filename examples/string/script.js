@@ -1,4 +1,4 @@
 function convertPayload(payload, context) {
-  context.logInfo(payload);
-  context.addMeasurement("my-text", payload);
+    context.logInfo(payload);
+    context.addMeasurement("my-text", payload);
 }

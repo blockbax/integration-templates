@@ -16,7 +16,7 @@ function convertRecord(context, ingestionIdPrefix, record) {
             timestamp
         );
     }
-    
+
     for (const field of record.Fields || []) {
         convertField(context, timestamp, ingestionIdPrefix, field);
     }
