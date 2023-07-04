@@ -10,9 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         outputs:
             resources: ${{ steps.changes.outputs.resources }}
-            groups-yml: ${{ steps.changes.outputs.groups-yml }}
-            groups-templates: ${{ steps.changes.outputs.groups-templates }}
-            groups-js: ${{ steps.changes.outputs.groups-js }}
+            groups: ${{ steps.changes.outputs.groups }}
         permissions: write-all
         steps:
             - uses: actions/checkout@v3
@@ -22,16 +20,8 @@ jobs:
               with:
                   filters: |
                       resources:
-                        - 'resources/**/*.js'
-                      groups-yml:
-                        - 'groups/**/*.yaml'
-                        - 'groups/**/*.yml'
-                      groups-test:
-                        - 'groups/**/*.js'
-                        - 'groups/**/**/@(payloads)/**/*'
-                        - 'groups/**/tests.yml'
-                        - 'groups/**/tests.yaml'
-                      groups-templates:
+                        - 'resources/**/*'
+                      groups:
                         - 'groups/**/*'
 
     pre-check:
@@ -46,7 +36,7 @@ jobs:
 
     validate:
         needs: changes
-        if: ${{ needs.changes.outputs.groups-yml == 'true' }}
+        if: ${{ needs.changes.outputs.groups == 'true' }}
         runs-on: ubuntu-latest
         container:
             image: registry.gitlab.com/blockbax/solutions/integration-templates-ci/integration-templates:latest
@@ -62,7 +52,7 @@ jobs:
 
     test-user-scripts:
         needs: changes
-        if: ${{ needs.changes.outputs.groups-test == 'true' }}
+        if: ${{ needs.changes.outputs.groups == 'true' }}
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -74,7 +64,7 @@ jobs:
         runs-on: ubuntu-latest
         needs: [changes, validate, test-user-scripts]
         if: |
-            needs.changes.outputs.groups-templates == 'true' && 
+            needs.changes.outputs.groups == 'true' && 
             always() && 
             !contains(needs.*.result, 'failure') &&
             !contains(needs.*.result, 'cancelled')
