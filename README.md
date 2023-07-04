@@ -99,7 +99,7 @@ The `level` can be choosen from the following options:
 
 ##### Payloads
 
-Inside the `payloads/` directory you can add example payloads that you can use inside your tests file to automatically test your templates userScript.  The payload file is read in as a `utf-8` string and depending on the configured `payloadFormat` of the template parsed/decoded to the expected input format. `CBOR` & `JSON` are parsed to javascript objects using their respective parsers.  For the `STRINIG` type the raw string contents are used and for the `BYTES` type the contents of the payload are expected to be in hexadecimal characters.
+Inside the `payloads/` directory you can add example payloads that you can use inside your tests file to automatically test your templates conversion script.  The payload file is read in as a `utf-8` string and depending on the configured `payloadFormat` of the template parsed/decoded to the expected input format. `CBOR` & `JSON` are parsed to javascript objects using their respective parsers.  For the `STRINIG` type the raw string contents are used and for the `BYTES` type the contents of the payload are expected to be in hexadecimal characters.
 
 #### Assets
 
