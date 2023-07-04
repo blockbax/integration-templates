@@ -83,7 +83,7 @@ default:
           date: 2022-08-16T08:57:09.000+00:00
     expectedLogs:
         - level: INFO
-          message: test log
+          message: Test log
     expectedErrors:
         - message: Test error
 
