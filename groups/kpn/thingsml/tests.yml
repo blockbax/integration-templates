@@ -1,0 +1,38 @@
+default:
+    description: Should add measurement for valid payload
+    payload: ./payloads/validPayload.json
+    expectedMeasurements:
+        - ingestionId: urn:dev:DEVEUI:0123456789012345:$TEMPERATURE
+          value: 29.75
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012345:$BATTERY_VOLTAGE
+          value: 3.59
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012345:$extTemp
+          value: 17.22
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012345:$io
+          value: 0
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012346:$TEMPERATURE
+          value: 29.75
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012346:$BATTERY_VOLTAGE
+          value: 3.59
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012346:$extTemp
+          value: 17.22
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012346:$io
+          value: 0
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012345:$LOCATION
+          value:
+              lat: 51.95255
+              lon: 5.32949
+          date: 2019-04-14T15:57:59.000+00:00
+        - ingestionId: urn:dev:DEVEUI:0123456789012346:$LOCATION
+          value:
+              lat: 51.95253
+              lon: 5.32944
+          date: 2019-04-14T15:57:59.000+00:00

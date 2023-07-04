@@ -1,0 +1,13 @@
+default:
+    description: Should add measurements for valid payload
+    payload: ./payloads/exampleUplinkPayload.json
+    expectedMeasurements:
+        - ingestionId: test-device$humidity
+          value: 34
+          date: 2023-03-02T12:42:41.983+00:00
+        - ingestionId: test-device$magnet
+          value: 0
+          date: 2023-03-02T12:42:41.983+00:00
+        - ingestionId: test-device$temperature
+          value: 20.7
+          date: 2023-03-02T12:42:41.983+00:00

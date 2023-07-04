@@ -1,0 +1,5 @@
+version: 1
+name: Bytes example
+description: Bytes example provided by Blockbax
+protocol: HTTP
+payloadFormat: BYTES

@@ -1,0 +1,12 @@
+{
+    "payload": [
+        {
+            "bn": "test-subject-id"
+        },
+        {
+            "n": "test-metric-id",
+            "v": 1,
+            "t": 1672652303
+        }
+    ]
+}

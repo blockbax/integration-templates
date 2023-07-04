@@ -1,0 +1,5 @@
+version: 1
+name: KEPServerEX
+description: Ingest measurements in KEPServerEX format into Blockbax
+protocol: MQTT
+payloadFormat: JSON

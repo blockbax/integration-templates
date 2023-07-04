@@ -1,0 +1,11 @@
+{
+    "SourceAddress": "14971000",
+    "SensorNodeId": "f07970e4",
+    "Timestamp": 1678893815,
+    "GatewayId": "bb7747d8",
+    "MeasDetails": {
+        "Id": 33987,
+        "CalcId": 4
+    },
+    "Type": "scalar"
+}

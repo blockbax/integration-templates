@@ -1,0 +1,9 @@
+default:
+    description: Should add measurement and log line
+    payload: ./payloads/exampleStringPayload
+    expectedMeasurements:
+        - ingestionId: "my-text"
+          value: this is my input string
+    expectedLogs:
+        - level: INFO
+          message: this is my input string

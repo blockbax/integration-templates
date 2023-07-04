@@ -1,0 +1,15 @@
+[
+    {
+        "bn": "test-subject-id"
+    },
+    {
+        "n": "test-metric-id-1",
+        "v": 1,
+        "t": 1672652303
+    },
+    {
+        "n": "test-metric-id-2",
+        "vd": "MzAw",
+        "t": 1672652303
+    }
+]

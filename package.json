@@ -1,0 +1,23 @@
+{
+    "name": "integration-templates",
+    "description": "Repository for all integration templates",
+    "scripts": {
+        "add": "node ./resources/cli/add.js",
+        "test": "jest",
+        "alt-test": "jest resources/src/tests/exampleScripts.test.js resources/src/tests/timezone.test.js",
+        "lint": "prettier --write ."
+    },
+    "devDependencies": {
+        "just-install": "^1.0.8",
+        "inquirer": "^8.2.3",
+        "js-yaml": "^4.1.0",
+        "mustache": "^4.2.0",
+        "dayjs": "^1.11.5",
+        "jest": "^28.1.0",
+        "moment": "^2.29.4",
+        "yargs": "^17.5.1"
+    },
+    "dependencies": {
+        "cbor": "^8.1.0"
+    }
+}

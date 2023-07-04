@@ -1,0 +1,5 @@
+version: 1
+name: String example
+description: String example provided by Blockbax
+protocol: HTTP
+payloadFormat: STRING

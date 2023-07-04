@@ -1,0 +1,12 @@
+default:
+    description: Should add measurement for valid payload
+    payload: ./payloads/hexFile
+    expectedMeasurements:
+        - ingestionId: test-1
+          value: "25,27,53,52"
+        - ingestionId: test-2
+          value: "14,0,0,0"
+        - ingestionId: test-3
+          value: "118,0,0,1"
+        - ingestionId: test-4
+          value: "97,66,146,146"

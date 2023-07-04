@@ -1,0 +1,5 @@
+version: 1
+name: CBOR example
+description: CBOR example provided by Blockbax
+protocol: HTTP
+payloadFormat: CBOR

@@ -1,0 +1,5 @@
+version: 1
+name: Basic decoded payload
+description: Ingest measurements in TTN format into Blockbax
+protocol: HTTP
+payloadFormat: JSON
