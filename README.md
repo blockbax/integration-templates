@@ -75,7 +75,7 @@ This is an example `tests.yml`, note that there should always be one `default` t
 ```yaml
 default:
     # at least one 'default' test
-    description: Should ingest a number from the json file, log a test message and log a test error
+    description: Should ingest a number from the json file, log a test INFO message and log a test error
     payload: ./payloads/jsonPayloadExample.json
     expectedMeasurements:
         - ingestionId: test-subject-id$test-ingestion-id
