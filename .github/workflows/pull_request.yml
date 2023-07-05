@@ -41,7 +41,7 @@ jobs:
         if: ${{ needs.changes.outputs.groups == 'true' }}
         runs-on: ubuntu-latest
         container:
-            image: registry.gitlab.com/blockbax/solutions/integration-templates-ci/integration-templates:latest
+            image: registry.gitlab.com/blockbax/public/integration-templates-ci/integration-templates-ci:latest
             credentials:
                 username: ${{  secrets.DOCKER_CONTAINER_REGISTRY_USERNAME }}
                 password: ${{  secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
