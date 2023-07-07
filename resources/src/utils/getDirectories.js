@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const { array } = require("yargs");
 
 module.exports = getDirectories = (srcPaths) => {
     if (!Array.isArray(srcPaths)) {

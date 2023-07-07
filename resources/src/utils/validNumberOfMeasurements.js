@@ -1,4 +1,4 @@
-function toBeValidnumberOfMeasurements(numberOfMeasurements) {
+function toBeValidNumberOfMeasurements(numberOfMeasurements) {
     if (numberOfMeasurements > 500) {
         return {
             message: () =>
@@ -17,5 +17,5 @@ function toBeValidnumberOfMeasurements(numberOfMeasurements) {
 }
 
 expect.extend({
-    toBeValidnumberOfMeasurements,
+    toBeValidNumberOfMeasurements,
 });

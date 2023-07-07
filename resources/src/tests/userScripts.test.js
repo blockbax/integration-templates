@@ -140,7 +140,7 @@ for (const groupId of groupIds) {
                         // Test if added measurements are the same as the expected measurements
                         expect(
                             context.addMeasurement.mock.calls.length
-                        ).toBeValidnumberOfMeasurements();
+                        ).toBeValidNumberOfMeasurements();
                         expect(context.addMeasurement.mock.calls).toEqual(
                             expected
                         );

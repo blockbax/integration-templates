@@ -98,10 +98,10 @@ function parseIngestionID(baseName, name) {
         // We use the basename as subject external ID and the name as Metric external ID
         return `${baseName}\$${name}`;
     } else if (baseName == null && name != null) {
-        // sender is responsible to keep the name unqiue if no base name is provided
+        // sender is responsible to keep the name unique if no base name is provided
         return `${name}`;
     } else if (baseName != null && name == null) {
-        // sender is responsible to keep the base name unqiue if no name is provided
+        // sender is responsible to keep the base name unique if no name is provided
         return `${baseName}`;
     }
     return null;

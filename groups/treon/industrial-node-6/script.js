@@ -17,11 +17,11 @@ function convertPayload(payload, context) {
     }
 
     if (timestamp == null) {
-        context.logError(`No valid timestmap: ${timestamp}`);
+        context.logError(`No valid timestamp: ${timestamp}`);
         return;
     }
 
-    parsePayloadWithtOptionalFields(
+    parsePayloadWithOptionalFields(
         payload,
         context,
         subjectExternalId,
@@ -55,7 +55,7 @@ function parsePayloadWithTemperatureField(
     }
 }
 
-function parsePayloadWithtOptionalFields(...args) {
+function parsePayloadWithOptionalFields(...args) {
     fields = [
         "Acceleration", // Single x,y,z acceleration value (JSON)
         "AirQuality", // Air quality index, volatile organic compounds
@@ -69,7 +69,7 @@ function parsePayloadWithtOptionalFields(...args) {
         "Hall", // Magnetic hall switch (boolean)
         "Humidity", // Air humidity (%)
         "IAQaccuracy", // Air quality sensor calibration status
-        "IAQaccuracyStatic", // IAQaccuracy for AirQualityStatic
+        "IAQaccuracyStatic", // IAQ accuracy for AirQualityStatic
         "Movement", // Movement detected (boolean): acceleration was larger than a predefined value
         "Pressure", // Air pressure (hPa)
         "Temperature", // Temperature (C)
@@ -114,7 +114,7 @@ function parseScalarPayload(payload, context, subjectExternalId, timestamp) {
             Kurtosis: defaultScalar,
             Crest: defaultScalar,
             // While V-P2P, V-P2P and V-RMS should be send, we receive the following fields
-            // These are asumed to be velocity
+            // These are assumed to be velocity
             RMS: defaultScalar,
             P2P: defaultScalar,
             Z2P: defaultScalar,

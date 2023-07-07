@@ -138,7 +138,7 @@ describe("examples", () => {
                     // Test if added measurements are the same as the expected measurements
                     expect(
                         context.addMeasurement.mock.calls.length
-                    ).toBeValidnumberOfMeasurements();
+                    ).toBeValidNumberOfMeasurements();
                     expect(context.addMeasurement.mock.calls).toEqual(expected);
                     context.addMeasurement.mock.calls.forEach((call) => {
                         expect(call[1]).toBeValidValue();
