@@ -9,7 +9,6 @@
         "lint": "prettier --write ."
     },
     "devDependencies": {
-        "just-install": "^1.0.8",
         "js-yaml": "^4.1.0",
         "dayjs": "^1.11.5",
         "jest": "^28.1.0",
