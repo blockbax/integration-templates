@@ -9,9 +9,10 @@
         "lint": "prettier --write ."
     },
     "devDependencies": {
-        "js-yaml": "^4.1.0",
         "dayjs": "^1.11.5",
         "jest": "^28.1.0",
-        "moment": "^2.29.4"
+        "js-yaml": "^4.1.0",
+        "moment": "^2.29.4",
+        "prettier": "^3.0.0"
     }
 }
