@@ -4,9 +4,6 @@ This repository contains the source for Blockbax integration templates. These te
 and ingest the data into Blockbax. You can find select one of these templates when configuring
 [Inbound Connectors](https://blockbax.com/docs/integrations/#inbound-connectors).
 
-Note: if you have full control over how measurements are sent to Blockbax, you do not need an integration template.
-In that case, you can simply sent the measurements in the default Blockbax format.
-
 ## Examples
 
 We added examples inside `examples/` directory which you can use as a basis for your own templates.
