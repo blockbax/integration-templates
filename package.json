@@ -8,7 +8,6 @@
         "lint": "prettier --write ."
     },
     "devDependencies": {
-        "dayjs": "^1.11.5",
         "jest": "^28.1.0",
         "js-yaml": "^4.1.0",
         "moment": "^2.29.4",
