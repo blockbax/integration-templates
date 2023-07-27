@@ -1,6 +1,11 @@
 # Integration Templates
 
-Integration templates are templates defined by groups that are selectable and configurable within the Blockbax Platform. Templates are used to configure [Inbound Connectors](https://blockbax.com/docs/integrations/#inbound-connectors) that parse incoming payloads to ingested various measurements within the Blockbax Platform. This repository is used to manage all integration templates.
+This repository contains the source for Blockbax integration templates. These templates can be use to parse incoming payloads
+and ingest the data into Blockbax. You can find select one of these templates when configuring
+[Inbound Connectors](https://blockbax.com/docs/integrations/#inbound-connectors).
+
+Note: if you have full control over how measurements are sent to Blockbax, you do not need an integration template.
+In that case, you can simply sent the measurements in the default Blockbax format.
 
 To add or update a template please read our [integration templates documentation](https://blockbax.com/docs/integrations/integration-templates#creating-or-updating-integration-templates).
 
@@ -8,7 +13,7 @@ To add or update a template please read our [integration templates documentation
 
 We added examples inside `examples/` directory which you can use as a basis for your own templates.
 
-## Repository overview
+## Groups
 
 ```bash
 groups/
@@ -24,18 +29,15 @@ groups/
 │    │    │    ├── README.md
 ```
 
-### group
-
-Inside this repository groups can configure their inbound connector templates inside the `groups` directory. Groups are added by including a `groups/<group-id>/index.yml` file. This is an example `index.yml`:
+The templates are grouped by vendor. Inside a group multiple templates can be defined. Each group should contain an `index.yml` file describing
+the group. This is an example `index.yml`:
 
 ```yml
-# group display name
-# Maximum of 50 characters.
+# Group display name (maximum of 50 characters)
 name: Your company
-# group desciption
-# Maximum of 150 characters.
+# Group description (maximum of 150 characters)
 description: Example for your company or group
-# group contact information and socials (optional)
+# Group contact information and socials (optional)
 contact:
     email: your@company.com
     website: https://www.your-company.com
@@ -50,41 +52,36 @@ The `contact` field is optional.
 
 ### Template
 
-Each group defines their templates inside their group directory. These templates are configured inside the `groups/<group-id>/<template-id>/` directory.
-
-#### Configuration
+Each group can contain multiple templates. Each template is stored in its own directory:
+`groups/<group-id>/<template-id>/`.
 
 The template can be configured by creating a `config.yml` file inside the template directory. This is an example `config.yml`:
 
 ```yaml
 # Version used to track changes
 version: 1
-# Template display name.
-# Maximum of 50 characters.
+# Template display name (maximum of 50 characters)
 name: Your template
-# Template description to provide additional information.
-# Maximum of 150 characters.
+# Template description to provide additional information (maximum of 150 characters)
 description: Your template description
 # Template protocol
-# Choose from HTTP, MQTT or CoAP.
 protocol: HTTP
-# Template protoco format.
-# Choose from STRING, BYTES, JSON, CBOR.
+# Template protocol format
 payloadFormat: JSON
 # A list of unique versions that are deprecated.
 deprecatedVersions: []
 ```
 
-The `protocol` and `payloadFormat` can be choosen from the following options:
+The `protocol` and `payloadFormat` can be chosen from the following options:
 
 | Field           | Options                             |
 | --------------- | ----------------------------------- |
 | `protocol`      | `HTTP`, `MQTT` or `CoAP`            |
 | `payloadFormat` | `JSON`, `CBOR`, `STRING` or `BYTES` |
 
-The `description` field is optional and the `version` field needs to be greater than `1`.
+The `description` field is optional and the `version` field needs to be `1` or greater.
 
-#### Testing
+### Testing
 
 To test your template you can define tests inside the `tests.yml` file. Tests are automatically run inside our CI pipelines and use the `script.js` file from the template. You can also run the tests locally by running `npm test`.
 
@@ -109,15 +106,15 @@ test-measurements-from-json-payload:
     # Define more tests
 ```
 
-The `level` can be choosen from the following options:
+The `level` can be chosen from the following options:
 
 | Field   | Options                   |
 | ------- | ------------------------- |
 | `level` | `INFO`, `WARN` or `ERROR` |
 
-##### Payloads
+#### Payloads
 
-Inside the `payloads/` directory you can add example payloads that you can use inside your tests file to automatically test your templates conversion script. The payload file is read in as a `utf-8` string and depending on the configured `payloadFormat` of the template it is parsed/decoded to the expected payload format. `CBOR` & `JSON` are parsed to javascript objects using their respective parsers. For the `STRINIG` type the raw string contents are used and for the `BYTES` type the contents of the payload are expected to be in hexadecimal characters.
+Inside the `payloads/` directory you can add example payloads that you can use inside your tests file to automatically test your templates conversion script. The payload file is read in as a `utf-8` string and, depending on the configured `payloadFormat` of the template, it is parsed/decoded to the expected payload format. `CBOR` & `JSON` are parsed to Javascript objects using their respective parsers. For the `STRING` type the raw string contents are used and for the `BYTES` type the contents of the payload are expected to be in hexadecimal characters.
 
 Example payloads for each payload format can be found in the `examples/` directory.
 
