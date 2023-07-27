@@ -5,7 +5,6 @@
     "email": "development@blockbax.com",
     "scripts": {
         "test": "jest",
-        "pre-check": "jest resources/src/tests/exampleScripts.test.js resources/src/tests/timezone.test.js",
         "lint": "prettier --write ."
     },
     "devDependencies": {
