@@ -7,8 +7,6 @@ and ingest the data into Blockbax. You can find select one of these templates wh
 Note: if you have full control over how measurements are sent to Blockbax, you do not need an integration template.
 In that case, you can simply sent the measurements in the default Blockbax format.
 
-To add or update a template please read our [integration templates documentation](https://blockbax.com/docs/integrations/integration-templates#creating-or-updating-integration-templates).
-
 ## Examples
 
 We added examples inside `examples/` directory which you can use as a basis for your own templates.
