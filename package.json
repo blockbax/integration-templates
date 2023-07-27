@@ -1,8 +1,7 @@
 {
     "name": "integration-templates",
-    "description": "Repository for all integration templates",
-    "homepage": "https://blockbax.com/docs/integrations/integration-templates/",
-    "email": "development@blockbax.com",
+    "license": "Apache-2.0",
+    "copyright": "© Blockbax 2023. All rights reserved.",
     "scripts": {
         "test": "jest",
         "lint": "prettier --write ."
