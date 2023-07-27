@@ -1,0 +1,5 @@
+name: Internet Engineering Task Force (IETF)
+description: Templates to convert standards provided by the Internet Engineering Task Force (IETF)
+contact:
+    website: https://www.ietf.org/
+    email: support@ietf.org

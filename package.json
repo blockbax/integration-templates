@@ -1,0 +1,15 @@
+{
+    "name": "integration-templates",
+    "license": "Apache-2.0",
+    "copyright": "© Blockbax 2023. All rights reserved.",
+    "scripts": {
+        "test": "jest",
+        "lint": "prettier --write ."
+    },
+    "devDependencies": {
+        "jest": "^28.1.0",
+        "js-yaml": "^4.1.0",
+        "moment": "^2.29.4",
+        "prettier": "^3.0.0"
+    }
+}

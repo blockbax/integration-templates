@@ -1,0 +1,40 @@
+{
+    "SensorNodeId": "f07970e4",
+    "SourceAddress": "12562103",
+    "GatewayId": "bb3ff36a",
+    "Temperature": 23.67,
+    "Timestamp": 1631010967,
+    "Vibration": {
+        "RMS": {
+            "Y": 2,
+            "X": 2,
+            "Z": 2
+        },
+        "Kurtosis": {
+            "Y": 300,
+            "X": 311,
+            "Z": 296
+        },
+        "P2P": {
+            "Y": 11023,
+            "X": 16400,
+            "Z": 40130
+        },
+        "Z2P": {
+            "Y": 6096,
+            "X": 9346,
+            "Z": 25764
+        }
+    },
+    "MeasDetails": {
+        "FftSize": 4096,
+        "FftWindow": 2,
+        "G-range": 4,
+        "Precision": 1,
+        "BinSize": 1000,
+        "ValueOffset": 0,
+        "Trigger": 1,
+        "Id": 200
+    },
+    "Type": "scalar"
+}

@@ -1,0 +1,11 @@
+{
+    "timestamp": 1438011255230,
+    "values": [
+        {
+            "id": "Channel1.Device1.Tag1",
+            "v": 250,
+            "q": true,
+            "t": 1438011254668
+        }
+    ]
+}

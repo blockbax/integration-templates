@@ -1,0 +1,63 @@
+name: Workflow on pull requests
+# TODO: add CLA check
+
+on:
+    pull_request:
+        types: [opened, reopened]
+        branches:
+            - main
+
+jobs:
+    changes:
+        runs-on: ubuntu-latest
+        outputs:
+            resources: ${{ steps.changes.outputs.resources }}
+            groups: ${{ steps.changes.outputs.groups }}
+        permissions: write-all
+        steps:
+            - uses: actions/checkout@v3
+            - name: Check for changes
+              uses: dorny/paths-filter@v2
+              id: changes
+              with:
+                  filters: |
+                      resources:
+                        - 'resources/**/*'
+                      groups:
+                        - 'groups/**/*'
+
+    pre-check:
+        needs: changes
+        if: ${{ needs.changes.outputs.resources == 'true' }}
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+            - run: npm install --no-update-notifier --no-audit
+            - run: npm run pre-check
+
+    validate:
+        needs: changes
+        if: ${{ needs.changes.outputs.groups == 'true' }}
+        runs-on: ubuntu-latest
+        container:
+            image: registry.gitlab.com/blockbax/public/integration-templates-ci/integration-templates-ci:latest
+            credentials:
+                username: ${{  secrets.DOCKER_CONTAINER_REGISTRY_USERNAME }}
+                password: ${{  secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
+        env:
+            BX_USERNAME: ${{  secrets.BLOCKBAX_USERNAME }}
+            BX_PASSWORD: ${{  secrets.BLOCKBAX_PASSWORD }}
+        steps:
+            - uses: actions/checkout@v3
+            - run: validate
+
+    test-user-scripts:
+        needs: [changes, pre-check]
+        if: ${{ needs.changes.outputs.groups == 'true' }}
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+            - run: npm install --no-update-notifier --no-audit
+            - run: npm test resources/src/tests/userScripts.test.js

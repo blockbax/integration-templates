@@ -1,0 +1,33 @@
+{
+    "Vibration": {
+        "UsedRange": {
+            "Y": 5
+        }
+    },
+    "GatewayId": "bb7747d8",
+    "Timestamp": 1678893816,
+    "SensorNodeId": "f07970e4",
+    "SourceAddress": "14971000",
+    "BurstDetails": {
+        "DataType": 19,
+        "MeasurementTimeInterval": 37.37,
+        "BurstId": 701,
+        "ValueMapping": 13
+    },
+    "MeasDetails": {
+        "FFT": {
+            "FftSize": 4096,
+            "FftWindow": 1,
+            "Averaged": 9,
+            "Precision": 0,
+            "Overlap": 0,
+            "BinSize": 6533,
+            "ValueOffset": 0,
+            "Multiplier": 100000,
+            "CalcId": 4
+        },
+        "Id": 33987,
+        "CalcId": 4
+    },
+    "Type": "scalar"
+}

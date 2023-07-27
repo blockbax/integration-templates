@@ -1,0 +1,52 @@
+default:
+    description: Should add measurement for valid payload
+    payload: ./payloads/testPayload.json
+    expectedMeasurements:
+        - ingestionId: 351810$reason
+          value: 23
+          date: 2021-07-27T15:12:09.000+00:00
+        - ingestionId: 351810$reason
+          value: 11
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$0-speed
+          value: 10
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$0-speed-accuracy
+          value: 2
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$0-2d-heading
+          value: 101
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$0-pdop
+          value: 21
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$0-position-accuracy
+          value: 16
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$2-digital-input
+          value: 1
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$2-digital-output
+          value: 0
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$2-device-status
+          value: 31
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$6-internal-battery-voltage
+          value: 4184
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$6-external-voltage
+          value: 1216
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$6-internal-temperature
+          value: 3404
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$6-gsm-signal-strength
+          value: 31
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$24-peak
+          value: 3
+          date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$24-average
+          value: 2
+          date: 2021-07-27T15:17:09.000+00:00

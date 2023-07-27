@@ -1,0 +1,20 @@
+{
+    "id": "airthings-1",
+    "data": [
+        {
+            "serialNumber": "2920030997",
+            "recorded": "2022-06-15T17:00:00",
+            "radonShortTermAvg": 3.4,
+            "humidity": 4.5,
+            "temp": 23.1,
+            "co2": 0.3,
+            "pressure": 40,
+            "tvoc": 4,
+            "light": 256,
+            "rssi": -4,
+            "batteryPercentage": 0.6,
+            "virusRisk": 2,
+            "mold": 4
+        }
+    ]
+}
