@@ -1,0 +1,124 @@
+default:
+    description: Should parse valid complete payload"
+    payload: ./payloads/validPayload.json
+    expectedMeasurements:
+        - ingestionId: 2920030997$radonShortTermAvg
+          value: 3.4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$humidity
+          value: 4.5
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$temp
+          value: 23.1
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$co2
+          value: 0.3
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$pressure
+          value: 40
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$tvoc
+          value: 4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$light
+          value: 256
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$rssi
+          value: -4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$batteryPercentage
+          value: 0.6
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$virusRisk
+          value: 2
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$mold
+          value: 4
+          date: 2022-06-15T17:00:00.000+00:00
+
+test-parse-valid-incomplete-payload-with-radon:
+    description: Should parse valid incomplete payload with radon
+    payload: ./payloads/incompletePayloadWithRadon.json
+    expectedMeasurements:
+        - ingestionId: 2920030997$radonShortTermAvg
+          value: 3.4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$humidity
+          value: 4.5
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$temp
+          value: 23.1
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$co2
+          value: 0.3
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$pressure
+          value: 40
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$tvoc
+          value: 4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$light
+          value: 256
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$rssi
+          value: -4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$batteryPercentage
+          value: 0.6
+          date: 2022-06-15T17:00:00.000+00:00
+
+test-parse-valid-incomplete-payload-with-mold:
+    description: Should parse valid incomplete payload with mold
+    payload: ./payloads/incompletePayloadWithMold.json
+    expectedMeasurements:
+        - ingestionId: 2920030997$humidity
+          value: 4.5
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$temp
+          value: 23.1
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$co2
+          value: 0.3
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$pressure
+          value: 40
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$tvoc
+          value: 4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$light
+          value: 256
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$rssi
+          value: -4
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$batteryPercentage
+          value: 0.6
+          date: 2022-06-15T17:00:00.000+00:00
+        - ingestionId: 2920030997$mold
+          value: 4
+          date: 2022-06-15T17:00:00.000+00:00
+
+test-parse-valid-payload-with-just-virusRisk:
+    description: Should parse valid payload with just virusRisk
+    payload: ./payloads/incompletePayloadWithVirusRisk.json
+    expectedMeasurements:
+        - ingestionId: 2920030997$virusRisk
+          value: 1
+          date: 2022-06-15T17:00:00.000+00:00
+
+test-throw-error-when-data-not-array:
+    description: Should log error when data is not an array
+    payload: ./payloads/invalidPayloadNotArray.json
+    expectedLogs:
+        - level: ERROR
+          message: Expected 'data' in payload to be an array
+
+test-null-value-ignored:
+    description: Should ignore null value
+    payload: ./payloads/ignoreNullValue.json
+    expectedMeasurements:
+        - ingestionId: 2920030997$virusRisk
+          value: 2
+          date: 2022-06-15T17:00:00.000+00:00

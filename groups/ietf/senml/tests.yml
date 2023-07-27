@@ -1,0 +1,21 @@
+default:
+    description: Should add measurement for valid payload
+    payload: ./payloads/validPayload.json
+    expectedMeasurements:
+        - ingestionId: test-subject-id$test-metric-id-1
+          value: 1
+          date: 2023-01-02T09:38:23.000+00:00
+        - ingestionId: test-subject-id$test-metric-id-2
+          value: 300
+          date: 2023-01-02T09:38:23.000+00:00
+
+test-missing-values:
+    description: Should skip payloads that contain no values
+    payload: ./payloads/missingFieldsPayload.json
+
+test-invalid-payload:
+    description: Should log an error for an invalid payload
+    payload: ./payloads/invalidPayload.json
+    expectedLogs:
+        - level: ERROR
+          message: Payload is not an array

@@ -1,0 +1,7 @@
+default:
+    description: Should add measurement for valid payload
+    payload: ./payloads/validPayload.json
+    expectedMeasurements:
+        - ingestionId: Channel1.Device1.Tag1
+          value: 250
+          date: 2015-07-27T15:34:14.668+00:00

@@ -1,0 +1,74 @@
+{
+    "end_device_ids": {
+        "device_id": "",
+        "application_ids": {
+            "application_id": "bx-test"
+        },
+        "dev_eui": "test-device",
+        "join_eui": "",
+        "dev_addr": ""
+    },
+    "correlation_ids": [""],
+    "received_at": "2023-03-02T12:42:41.983055641Z",
+    "uplink_message": {
+        "session_key_id": "",
+        "f_port": 85,
+        "f_cnt": 9,
+        "frm_payload": "",
+        "decoded_payload": {
+            "humidity": 34,
+            "magnet": 0,
+            "temperature": 20.7
+        },
+        "rx_metadata": [
+            {
+                "gateway_ids": {
+                    "gateway_id": "",
+                    "eui": ""
+                },
+                "time": "2023-03-02T12:42:40.745Z",
+                "timestamp": 3384202571,
+                "rssi": -86,
+                "channel_rssi": -86,
+                "snr": 12.5,
+                "frequency_offset": "-99",
+                "location": {
+                    "latitude": 51.92532126881667,
+                    "longitude": 4.4758906960487375,
+                    "altitude": 30,
+                    "source": "SOURCE_REGISTRY"
+                },
+                "uplink_token": "",
+                "gps_time": "2023-03-02T12:42:40.745Z",
+                "received_at": "2023-03-02T12:42:41.759800083Z"
+            }
+        ],
+        "settings": {
+            "data_rate": {
+                "lora": {
+                    "bandwidth": 125000,
+                    "spreading_factor": 7,
+                    "coding_rate": "4/5"
+                }
+            },
+            "frequency": "868100000",
+            "timestamp": 3384202571,
+            "time": "2023-03-02T12:42:40.745Z"
+        },
+        "received_at": "2023-03-02T12:42:41.775081287Z",
+        "consumed_airtime": "0.061696s",
+        "version_ids": {
+            "brand_id": "milesight-iot",
+            "model_id": "em300-mcs",
+            "hardware_version": "V3.0",
+            "firmware_version": "1.2",
+            "band_id": "EU_863_870"
+        },
+        "network_ids": {
+            "net_id": "000013",
+            "tenant_id": "ttn",
+            "cluster_id": "eu1",
+            "cluster_address": "eu1.cloud.thethings.network"
+        }
+    }
+}

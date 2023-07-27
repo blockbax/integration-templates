@@ -1,0 +1,5 @@
+version: 1
+name: Oyster2
+description: Ingest measurements in Oyster 2 format into Blockbax
+protocol: HTTP
+payloadFormat: JSON

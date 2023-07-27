@@ -1,0 +1,7 @@
+{
+    "id": "test-subject-id",
+    "timestamp": 1660640229000,
+    "data": {
+        "test-metric-id": 2
+    }
+}
