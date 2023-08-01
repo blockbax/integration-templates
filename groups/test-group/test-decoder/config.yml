@@ -1,0 +1,5 @@
+version: 1
+name: Test decoder
+description: Testing the addition of a new group with a new decoder
+protocol: HTTP
+payloadFormat: JSON

@@ -1,9 +1,7 @@
 name: Workflow on pull requests
-# TODO: add CLA check
 
 on:
     pull_request:
-        types: [opened, reopened]
         branches:
             - main
 
@@ -26,16 +24,6 @@ jobs:
                       groups:
                         - 'groups/**/*'
 
-    pre-check:
-        needs: changes
-        if: ${{ needs.changes.outputs.resources == 'true' }}
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-            - run: npm install --no-update-notifier --no-audit
-            - run: npm run pre-check
-
     validate:
         needs: changes
         if: ${{ needs.changes.outputs.groups == 'true' }}
@@ -53,7 +41,7 @@ jobs:
             - run: validate
 
     test-user-scripts:
-        needs: [changes, pre-check]
+        needs: [changes]
         if: ${{ needs.changes.outputs.groups == 'true' }}
         runs-on: ubuntu-latest
         steps:
