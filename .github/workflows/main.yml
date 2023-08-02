@@ -69,4 +69,4 @@ jobs:
             BX_PASSWORD: ${{  secrets.BLOCKBAX_PASSWORD }}
         steps:
             - uses: actions/checkout@v3
-            - run: publish --dry-run
+            - run: publish
