@@ -59,7 +59,7 @@ function convertField(context, timestamp, ingestionIdPrefix, field) {
                 break;
             default:
                 context.logError(
-                    `Unknown F type send: ${
+                    `Unknown F type sent: ${
                         field.FType
                     }, payload: ${JSON.stringify(payload)}`
                 );

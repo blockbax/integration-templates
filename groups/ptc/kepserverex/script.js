@@ -5,17 +5,14 @@ function convertPayload(payload, context) {
         return;
     }
     for (const value of payload.values) {
-        let timestamp = value.t;
-        if (timestamp == null && payload.timestamp != null) {
-            timestamp = payload.timestamp;
-        }
+        const timestamp = value.t ?? payload.timestamp;
         if (
             value.q &&
             value.v != null &&
             timestamp != null &&
             value.id != null
         ) {
-            context.addMeasurement(value.id, number(value.v), date(value.t));
+            context.addMeasurement(value.id, number(value.v), date(timestamp));
         }
     }
 }

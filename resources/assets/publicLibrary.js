@@ -7,7 +7,7 @@ function location(lat, lon, alt) {
 }
 
 function number(value) {
-    return +parseFloat(value).toFixed(8);
+    return parseFloat(value).toFixed(8);
 }
 
 function date(value, format) {

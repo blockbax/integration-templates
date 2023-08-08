@@ -2,16 +2,16 @@ function convertPayload(payload, context) {
     // See: https://kb.treon.fi/knowledge_base/sensors/sensorjson/
     const {
         SensorNodeId: subjectExternalId,
-        Timestamp: timestamp,
         Type: type,
     } = payload;
+    const timestamp = payload.Timestamp * 1000;
 
     if (subjectExternalId == null) {
         context.logError(`No valid subject external id: ${subjectExternalId}`);
         return;
     }
 
-    if (type == "burst") {
+    if (type === "burst") {
         // not supported
         return;
     }
@@ -50,7 +50,7 @@ function parsePayloadWithTemperatureField(
         context.addMeasurement(
             ingestionId,
             number(temperature),
-            date(timestamp * 1000)
+            date(timestamp)
         );
     }
 }
@@ -96,7 +96,7 @@ function ingestIfValuePresent(context, ingestionId, value, date) {
         context.addMeasurement(
             ingestionId,
             number(value),
-            date(timestamp * 1000)
+            date(timestamp)
         );
     }
 }
@@ -113,14 +113,11 @@ function parseScalarPayload(payload, context, subjectExternalId, timestamp) {
             "A-Z2P": defaultScalar,
             Kurtosis: defaultScalar,
             Crest: defaultScalar,
-            // While V-P2P, V-P2P and V-RMS should be send, we receive the following fields
-            // These are assumed to be velocity
-            RMS: defaultScalar,
-            P2P: defaultScalar,
-            Z2P: defaultScalar,
         };
 
         const filter = []; // nothing to filter
+        // While V-P2P, V-P2P and V-RMS should be sent, we receive the following fields
+        // These are assumed to be velocity
         const metricExternalIdMapping = {
             RMS: "V-RMS",
             P2P: "V-P2P",
@@ -143,7 +140,7 @@ function parseScalarPayload(payload, context, subjectExternalId, timestamp) {
                 context.addMeasurement(
                     ingestionId,
                     number(value),
-                    date(timestamp * 1000)
+                    date(timestamp)
                 );
             }
         }

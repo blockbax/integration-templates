@@ -97,13 +97,12 @@ function convertPayload(payload, context) {
                             timestamp: null,
                         };
                     }
-                    let currentLocation = locations[locationIngestionID].loc;
-                    let updatedLocation = updateLocation(
+                    const currentLocation = locations[locationIngestionID].loc;
+                    updateLocation(
                         currentLocation,
                         measurementIndex,
                         measurementValue
                     );
-                    locations[locationIngestionID].loc = updatedLocation;
                     locations[locationIngestionID].timestamp = timestamp;
                 }
             } else {
