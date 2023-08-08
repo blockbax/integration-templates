@@ -7,7 +7,9 @@ function location(lat, lon, alt) {
 }
 
 function number(value) {
-    return parseFloat(value).toFixed(8);
+    // The '+' here removes the excess 0s at the end, introduced by the .toFixed(8).
+    // .toFixed is responsible for limiting the precision.
+    return +parseFloat(value).toFixed(8);
 }
 
 function date(value, format) {
