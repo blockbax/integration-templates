@@ -1,5 +1,0 @@
-version: 2
-name: Test decoder - DO NOT USE
-description: DO NOT USE THIS TEST DECODER
-protocol: HTTP
-payloadFormat: JSON
