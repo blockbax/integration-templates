@@ -61,16 +61,11 @@ function convertPayload(payload, context) {
             measurementValue = valueBool ? 1 : 0;
         }
 
-        if (
-            valueData != null &&
-            (typeof valueData === "string" || valueData instanceof String)
-        ) {
-            const decodedNumberValue = parseValueData(valueData);
-            // The decoded value can still be of any type, for now we only accept number values
-            // Check if the decoded value buffer can be converted to a number then set as the measurement value
-            if (!isNaN(decodedNumberValue) && isFinite(decodedNumberValue)) {
-                measurementValue = number(decodedNumberValue);
-            }
+        const decodedNumberValue = parseValueData(valueData);
+        // The decoded value can still be of any type, for now we only accept number values
+        // Check if the decoded value buffer can be converted to a number then set as the measurement value
+        if (!isNaN(decodedNumberValue) && isFinite(decodedNumberValue)) {
+            measurementValue = number(decodedNumberValue);
         }
 
         if (measurementIndex != null) {
@@ -201,7 +196,6 @@ function updateLocation(location, measurementIndex, value) {
     } else if (measurementIndex == -20) {
         location.alt = value;
     }
-    return location;
 }
 
 function parseIngestionID(baseName, name) {
@@ -284,6 +278,12 @@ function parseTimestamp(baseTime, time) {
 }
 
 function parseValueData(valueData) {
+    if (
+        valueData == null ||
+        !(typeof valueData === "string" || valueData instanceof String)
+    ) {
+        return;
+    }
     /* From https://www.rfc-editor.org/rfc/rfc8428#section-4.3: 
     
     "Data Value is a base64-encoded string with the URL-safe alphabet as defined in Section 5 of [RFC4648], with padding omitted."
