@@ -52,7 +52,7 @@ function convertPayload(payload, context) {
         // Override value with either string value, boolean value or data value
         if (
             valueString != null &&
-            (typeof valueString === "string" || valueString instanceof String)
+            typeof valueString === "string"
         ) {
             measurementValue = valueString;
         }
@@ -280,7 +280,7 @@ function parseTimestamp(baseTime, time) {
 function parseValueData(valueData) {
     if (
         valueData == null ||
-        !(typeof valueData === "string" || valueData instanceof String)
+        typeof valueData !== "string"
     ) {
         return;
     }
