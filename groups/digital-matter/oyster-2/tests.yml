@@ -8,6 +8,11 @@ default:
         - ingestionId: 351810$reason
           value: 11
           date: 2021-07-27T15:17:09.000+00:00
+        - ingestionId: 351810$position
+          value:
+              lat: 51.9248351
+              lon: 4.4762497
+          date: 2021-07-27T15:17:09.000+00:00
         - ingestionId: 351810$0-speed
           value: 10
           date: 2021-07-27T15:17:09.000+00:00
