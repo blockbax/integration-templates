@@ -74,14 +74,11 @@ function convertFieldTyp0LocationData(
     field
 ) {
     if (field.Lat != null && field.Long != null && field.Alt != null) {
-        // Filter out positions with Lat and Lon exactly 0.0
-        if (!(field.Lat >= 0.0 && field.Long >= 0.0)) {
-            context.addMeasurement(
-                ingestionIdFTypePrefix + "-position",
-                location(field.Lat, field.Long, field.Alt),
-                timestamp
-            );
-        }
+        context.addMeasurement(
+            ingestionIdFTypePrefix + "-position",
+            location(field.Lat, field.Long, field.Alt),
+            timestamp
+        );
     }
     if (field.Spd != null) {
         context.addMeasurement(
