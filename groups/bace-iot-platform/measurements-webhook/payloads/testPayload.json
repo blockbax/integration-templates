@@ -49,5 +49,70 @@
             "id_container_data_latest": "b4081a8f-66da-408d-9672-523faa2a5a1e"
         },
         "hidden_at": null
-    }
+    },
+    {
+      "timestamp_seconds": 1672531200.0,
+      "timestamp_changed": 1672531200000,
+      "datatype": 5002,
+      "value": 0.07000000029802322,
+      "label": "Not timestamp metric",
+      "unit": "cd",
+      "icon": null,
+      "relations": {
+          "id_container": "15f3b24d-ffed-4201-b8c1-399342b67685",
+          "id_group": "9ace63e8-38bc-4bad-be80-89c1f091c07f",
+          "source_device": "f1df36e6-05d9-4997-9d70-ca09d2d8695d",
+          "id_container_data_latest": "b4081a8f-66da-408d-9672-523faa2a5a1e"
+      },
+      "hidden_at": null
+  },
+  {
+    "timestamp": 1672531200000,
+    "timestamp_seconds": 1672531200.0,
+    "timestamp_changed": 1672531200000,
+    "datatype": 5002,
+    "value": 0.07000000029802322,
+    "label": "",
+    "unit": "cd",
+    "icon": null,
+    "relations": {
+        "id_container": "15f3b24d-ffed-4201-b8c1-399342b67685",
+        "id_group": "9ace63e8-38bc-4bad-be80-89c1f091c07f",
+        "source_device": "f1df36e6-05d9-4997-9d70-ca09d2d8695d",
+        "id_container_data_latest": "b4081a8f-66da-408d-9672-523faa2a5a1e"
+    },
+    "hidden_at": null
+},
+{
+  "timestamp": 1672531200000,
+  "timestamp_seconds": 1672531200.0,
+  "timestamp_changed": 1672531200000,
+  "datatype": 5002,
+  "value": 0.07000000029802322,
+  "label": "No subject id metric",
+  "unit": "cd",
+  "icon": null,
+  "relations": {
+      "id_container": "15f3b24d-ffed-4201-b8c1-399342b67685",
+      "id_group": "9ace63e8-38bc-4bad-be80-89c1f091c07f",
+      "id_container_data_latest": "b4081a8f-66da-408d-9672-523faa2a5a1e"
+  },
+  "hidden_at": null
+},
+{
+  "timestamp": 1672531200000,
+  "timestamp_seconds": 1672531200.0,
+  "timestamp_changed": 1672531200000,
+  "datatype": 5002,
+  "label": "No value measurement",
+  "unit": "cd",
+  "icon": null,
+  "relations": {
+      "id_container": "15f3b24d-ffed-4201-b8c1-399342b67685",
+      "id_group": "9ace63e8-38bc-4bad-be80-89c1f091c07f",
+      "source_device": "f1df36e6-05d9-4997-9d70-ca09d2d8695d",
+      "id_container_data_latest": "b4081a8f-66da-408d-9672-523faa2a5a1e"
+  },
+  "hidden_at": null
+}
 ]
