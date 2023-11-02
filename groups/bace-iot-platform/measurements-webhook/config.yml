@@ -1,5 +1,5 @@
 version: 1
-name: Measurements
+name: Measurements webhook
 description: Ingest measurements in BACE Measurements format into Blockbax
 protocol: HTTP
 payloadFormat: JSON
