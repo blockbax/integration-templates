@@ -1,6 +1,6 @@
 default:
     description: Should add measurement for valid payload
-    payload: ./payloads/testPayload.json
+    payload: ./payloads/validPayload.json
     expectedMeasurements:
         - ingestionId: f1df36e6-05d9-4997-9d70-ca09d2d8695d$temperature
           value: 28.84399414
@@ -11,3 +11,6 @@ default:
         - ingestionId: f1df36e6-05d9-4997-9d70-ca09d2d8695d$light-intensity
           value: 0.07
           date: 2023-01-01T00:00:00.000+00:00
+    test-missing-values:
+      description: Should skip payloads that contain no values for required fields
+      payload: ./payloads/missingFieldsPayload.json
