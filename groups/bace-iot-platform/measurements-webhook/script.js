@@ -2,7 +2,12 @@ function convertPayload(payload, context) {
     payload.forEach((item) => {
         const { label, relations, value, timestamp } = item;
 
-        if (!label || !relations["source_device"] || value === undefined || !timestamp) {
+        if (
+            !label ||
+            !relations["source_device"] ||
+            value === undefined ||
+            !timestamp
+        ) {
             // Skip processing this item if any of the required properties is undefined
             return; // Continue to the next iteration
         }
@@ -10,11 +15,7 @@ function convertPayload(payload, context) {
         const source_device = relations["source_device"];
         const ingestionId = `${source_device}$${toKebabCase(label)}`;
 
-        const measurement = number(value);
-
-        const date = timestamp;
-
-        context.addMeasurement(ingestionId, measurement, date);
+        context.addMeasurement(ingestionId, number(value), date(timestamp));
     });
 }
 
