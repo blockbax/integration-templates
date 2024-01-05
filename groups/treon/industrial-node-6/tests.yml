@@ -40,4 +40,61 @@ default:
           date: 2021-09-07T10:36:07.000+00:00
         - ingestionId: f07970e4$V-Z2P-Z
           value: 25764
-          date: 2021-09-07T10:36:07.000+00
+          date: 2021-09-07T10:36:07.000+00:00
+
+valid-empty-scalar-payload:
+    description: empty payload
+    payload: ./payloads/validEmptyScalarPayload.json
+    expectedMeasurements:
+
+valid-burst-payload:
+    description: scalar payload
+    payload: ./payloads/validScalarPayload.json
+    expectedMeasurements:
+        - ingestionId: f07970e4$Temperature
+          value: 23.67
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-RMS-X
+          value: 0.02
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-RMS-Y
+          value: 0.02
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-RMS-Z
+          value: 0.02
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$Kurtosis-X
+          value: 3.11
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$Kurtosis-Y
+          value: 3.0
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$Kurtosis-Z
+          value: 2.96
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-P2P-X
+          value: 164.0
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-P2P-Y
+          value: 110.23
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-P2P-Z
+          value: 401.3
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-Z2P-X
+          value: 9346.0
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-Z2P-Y
+          value: 6096.0
+          date: 2021-09-07T10:36:07.000+00:00
+        - ingestionId: f07970e4$V-Z2P-Z
+          value: 25764.0
+          date: 2021-09-07T10:36:07.000+00:00
+
+valid-scalar-fft:
+    description: scalar payload
+    payload: ./payloads/validScalarPayloadFFTDetails.json
+    expectedMeasurements:
+        - ingestionId: f07970e4$UsedRange-Y
+          value: 5.0
+          date: 2023-03-15T15:23:36.000+00:00
