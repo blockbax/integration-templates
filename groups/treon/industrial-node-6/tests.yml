@@ -45,7 +45,6 @@ default:
 valid-empty-scalar-payload:
     description: empty payload
     payload: ./payloads/validEmptyScalarPayload.json
-    expectedMeasurements:
 
 valid-burst-payload:
     description: scalar payload
