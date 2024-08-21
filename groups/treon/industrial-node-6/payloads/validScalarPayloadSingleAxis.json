@@ -1,19 +1,13 @@
 {
     "Vibration": {
-        "A-P2P": {
-            "Z": 329
+        "RMS": {
+            "Z": 93
         },
-        "Kurtosis": {
-            "Z": 294
+        "Z2P": {
+            "Z": 266
         },
-        "A-Z2P": {
-            "Z": 176
-        },
-        "A-RMS": {
-            "Z": 39
-        },
-        "Crest": {
-            "Z": 446
+        "P2P": {
+            "Z": 532
         },
         "UsedRange": {
             "Z": 10
@@ -21,11 +15,11 @@
     },
     "SourceAddress": "12991911",
     "SensorNodeId": "72a83dc6",
-    "Timestamp": 1724229573,
+    "Timestamp": 1724229567,
     "GatewayId": "728350bc",
     "MeasDetails": {
         "Id": 45633,
-        "CalcId": 3
+        "CalcId": 1
     },
     "Type": "scalar"
 }
