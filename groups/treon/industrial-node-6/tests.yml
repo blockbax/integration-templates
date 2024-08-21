@@ -46,6 +46,20 @@ valid-empty-scalar-payload:
     description: empty payload
     payload: ./payloads/validEmptyScalarPayload.json
 
+valid-single-axis-scalar-payload:
+    description: single-axis scalar payload
+    payload: ./payloads/validScalarPayloadSingleAxis.json
+    expectedMeasurements:
+        - ingestionId: 72a83dc6$V-RMS-Z
+          value: 0.93
+          date: 2024-08-21T10:39:27.000+00:00
+        - ingestionId: 72a83dc6$V-Z2P-Z
+          value: 2.66
+          date: 2024-08-21T10:39:27.000+00:00
+        - ingestionId: 72a83dc6$V-P2P-Z
+          value: 5.32
+          date: 2024-08-21T10:39:27.000+00:00
+
 valid-burst-payload:
     description: scalar payload
     payload: ./payloads/validScalarPayload.json
