@@ -33,13 +33,13 @@ default:
           value: 401.3
           date: 2021-09-07T10:36:07.000+00:00
         - ingestionId: f07970e4$V-Z2P-X
-          value: 9346
+          value: 93.46
           date: 2021-09-07T10:36:07.000+00:00
         - ingestionId: f07970e4$V-Z2P-Y
-          value: 6096
+          value: 60.96
           date: 2021-09-07T10:36:07.000+00:00
         - ingestionId: f07970e4$V-Z2P-Z
-          value: 25764
+          value: 257.64
           date: 2021-09-07T10:36:07.000+00:00
 
 valid-empty-scalar-payload:
@@ -52,13 +52,13 @@ valid-single-axis-scalar-payload:
     expectedMeasurements:
         - ingestionId: 72a83dc6$V-RMS-Z
           value: 0.93
-          date: 2024-08-21T10:39:27.000+00:00
+          date: 2024-08-21T08:39:27.000+00:00
         - ingestionId: 72a83dc6$V-Z2P-Z
           value: 2.66
-          date: 2024-08-21T10:39:27.000+00:00
+          date: 2024-08-21T08:39:27.000+00:00
         - ingestionId: 72a83dc6$V-P2P-Z
           value: 5.32
-          date: 2024-08-21T10:39:27.000+00:00
+          date: 2024-08-21T08:39:27.000+00:00
 
 valid-burst-payload:
     description: scalar payload
@@ -95,13 +95,13 @@ valid-burst-payload:
           value: 401.3
           date: 2021-09-07T10:36:07.000+00:00
         - ingestionId: f07970e4$V-Z2P-X
-          value: 9346.0
+          value: 93.46
           date: 2021-09-07T10:36:07.000+00:00
         - ingestionId: f07970e4$V-Z2P-Y
-          value: 6096.0
+          value: 60.96
           date: 2021-09-07T10:36:07.000+00:00
         - ingestionId: f07970e4$V-Z2P-Z
-          value: 25764.0
+          value: 257.64
           date: 2021-09-07T10:36:07.000+00:00
 
 valid-scalar-fft:
