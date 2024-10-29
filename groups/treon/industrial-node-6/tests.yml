@@ -59,6 +59,9 @@ valid-single-axis-scalar-payload:
         - ingestionId: 72a83dc6$V-P2P-Z
           value: 5.32
           date: 2024-08-21T08:39:27.000+00:00
+        - ingestionId: 72a83dc6$UsedRange-Z
+          value: 10
+          date: 2024-08-21T08:39:27.000Z
 
 valid-burst-payload:
     description: scalar payload
