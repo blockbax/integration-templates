@@ -1,0 +1,25 @@
+{
+    "Vibration": {
+        "RMS": {
+            "Z": 93
+        },
+        "Z2P": {
+            "Z": 266
+        },
+        "P2P": {
+            "Z": 532
+        },
+        "UsedRange": {
+            "Z": 10
+        }
+    },
+    "SourceAddress": "12991911",
+    "SensorNodeId": "72a83dc6",
+    "Timestamp": 1724229567,
+    "GatewayId": "728350bc",
+    "MeasDetails": {
+        "Id": 45633,
+        "CalcId": 1
+    },
+    "Type": "scalar"
+}

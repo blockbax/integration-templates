@@ -110,6 +110,7 @@ function parseScalarPayload(payload, context, subjectExternalId, timestamp) {
             "A-P2P": defaultScalar,
             "V-RMS": defaultScalar,
             "A-RMS": defaultScalar,
+            "V-Z2P": defaultScalar,
             "A-Z2P": defaultScalar,
             Kurtosis: defaultScalar,
             Crest: defaultScalar,
