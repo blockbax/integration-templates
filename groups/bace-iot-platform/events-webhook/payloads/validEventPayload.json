@@ -1,0 +1,15 @@
+[
+    {
+        "id_event": 299663,
+        "id_group": "4df124e4-160d-46cf-b19c-3411e6280e3c",
+        "source_device": "e67c9edc-13ab-48cc-8802-765f6d185d52",
+        "from_device": 1,
+        "event_type": "202",
+        "event_type_label": "202 - Reset Cause on boot",
+        "occurred_at": 1660223629,
+        "value": "1",
+        "datatype": null,
+        "event_value_label": "ESP_RST_POWERON",
+        "event_value_description": "Reset due to power-on event"
+    }
+]

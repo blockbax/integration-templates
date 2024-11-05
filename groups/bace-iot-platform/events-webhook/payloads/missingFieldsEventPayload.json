@@ -1,0 +1,28 @@
+[
+    {
+        "id_event": 299665,
+        "id_group": "4df124e4-160d-46cf-b19c-3411e6280e3c",
+        "source_device": "e67c9edc-13ab-48cc-8802-765f6d185d52",
+        "from_device": 1,
+        "event_type": "203",
+        "event_type_label": "203 - Unexpected Event",
+        "occurred_at": 1660223629,
+        "value": "1",
+        "datatype": null,
+        "event_value_label": "EVENT_UNKNOWN",
+        "event_value_description": ""
+    },
+    {
+        "id_event": 299666,
+        "id_group": "4df124e4-160d-46cf-b19c-3411e6280e3c",
+        "source_device": "e67c9edc-13ab-48cc-8802-765f6d185d52",
+        "from_device": 1,
+        "event_type": "204",
+        "event_type_label": "",
+        "occurred_at": 1660223629,
+        "value": "1",
+        "datatype": null,
+        "event_value_label": "EVENT_SPECIFIC",
+        "event_value_description": "Specific event description"
+    }
+]

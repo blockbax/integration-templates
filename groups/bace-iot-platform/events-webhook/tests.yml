@@ -1,0 +1,14 @@
+default:
+    description: Should process and add event measurements for valid payload
+    payload: ./payloads/validEventPayload.json
+    expectedMeasurements:
+        - ingestionId: e67c9edc-13ab-48cc-8802-765f6d185d52$event-type-label
+          value: "202 - Reset Cause on boot"
+          date: 2022-08-11T13:13:49.000Z
+        - ingestionId: e67c9edc-13ab-48cc-8802-765f6d185d52$event-value-description
+          value: "Reset due to power-on event"
+          date: 2022-08-11T13:13:49.000Z
+
+test-missing-values:
+    description: Should skip payloads with missing required fields
+    payload: ./payloads/missingFieldsEventPayload.json
