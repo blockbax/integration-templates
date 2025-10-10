@@ -79,7 +79,6 @@ register-info-missing-map-warn:
     expectedLogs:
         - level: WARN
           message: Register info not found for addr 999 (subject=RouterInfoX-1, metric=400999). Value will not be validated.
-    expectedMeasurements:
 
 value-with-wrong-data-type-payload:
     description: Should log warn when register info not found and value will not be validated
@@ -87,4 +86,3 @@ value-with-wrong-data-type-payload:
     expectedLogs:
         - level: WARN
           message: 'Unable to parse value for addr 6 (subject=bx-test-server-1, metric=400006). Invalid data type: expected integer, got "should be number"'
-    expectedMeasurements:
